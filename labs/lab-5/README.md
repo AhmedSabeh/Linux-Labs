@@ -8,60 +8,39 @@ Learn how to find information about your current user, groups, and system enviro
 ## Steps
 
 1. **Find out who you are currently logged in as**
-   ```bash
+   ```
    whoami
-Example output:
+   ```
+-   Output:
 
-nginx
-Copy
-Edit
-ahmed
-Display your user ID and group memberships
+<img width="736" height="129" alt="Screenshot (199)" src="https://github.com/user-attachments/assets/a4cb4c9a-8bd3-4cae-8155-6c1cc131600a" />
 
-bash
-Copy
-Edit
+2. **Display your user ID and group memberships**
+```
 id
-Example output:
+```
+-   Output:
 
-ini
-Copy
-Edit
-uid=1000(ahmed) gid=1000(ahmed) groups=1000(ahmed),27(sudo),4(adm)
-Show your current working directory
+<img width="738" height="163" alt="Screenshot (200)" src="https://github.com/user-attachments/assets/f7b35167-54fd-4692-b0ed-7d44b9b7519c" />
 
-bash
-Copy
-Edit
+3. **Show your current working directory**
+```
 pwd
-Example output:
+```
+-   Output:
 
-arduino
-Copy
-Edit
-/home/ahmed
-Display the contents of your .bashrc file (if it exists)
+<img width="740" height="110" alt="Screenshot (201)" src="https://github.com/user-attachments/assets/d6b64c03-210a-486d-b0c8-94e9d47b56a5" />
 
-bash
-Copy
-Edit
+4- **Display the contents of your .bashrc file (if it exists)**
+```
 cat ~/.bashrc
+```
 (This file contains shell configuration and aliases.)
 
-List all hidden files in your home directory
-
-bash
-Copy
-Edit
+5- **List all hidden files in your home directory**
+```
 ls -la ~
-Example output:
+```
+-   Output:
 
-yaml
-Copy
-Edit
-drwxr-xr-x 18 ahmed ahmed 4096 Aug 14 19:40 .
-drwxr-xr-x  3 root  root  4096 Aug  5 09:12 ..
--rw-------  1 ahmed ahmed  675 Aug  7  .bash_history
--rw-r--r--  1 ahmed ahmed 3771 Aug  5  .bashrc
-...
-
+<img width="736" height="319" alt="Screenshot (202)" src="https://github.com/user-attachments/assets/d8cab985-9a9e-490b-a6cd-7fa3ea06884c" />
