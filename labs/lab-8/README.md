@@ -9,64 +9,41 @@ Learn how to update package lists, search for packages, install them, and verify
 
 1. **Update your package list**  
    *(Debian/Ubuntu-based systems)*  
-   ```bash
+   ```
    sudo apt update
-(RHEL/Fedora-based systems)
-
-bash
-Copy
-Edit
+   ```
+-  (RHEL/Fedora-based systems)
+```
 sudo dnf check-update
-Search for a package called tree in the package manager
-
-bash
-Copy
-Edit
+```
+2. **Search for a package called tree in the package manager**
+```
 apt search tree
+```
 or
-
-bash
-Copy
-Edit
+```
 dnf search tree
-Install the tree package
-
-bash
-Copy
-Edit
+```
+3. **Install the tree package**
+```
 sudo apt install tree -y
+```
 or
-
-bash
-Copy
-Edit
+```
 sudo dnf install tree -y
-Use the tree command to display your directory structure
-
-bash
-Copy
-Edit
+```
+4. **Use the tree command to display your directory structure**
+```
 tree ~/my_projects
-Example output:
+```
+-  Output:
 
-nginx
-Copy
-Edit
-my_projects
-├── backup
-├── documents
-│   ├── intro.txt
-│   └── readme.txt
-└── scripts
-Check if the tree package is installed
+<img width="924" height="475" alt="Screenshot (210)" src="https://github.com/user-attachments/assets/4a5b87ce-0d47-4799-a4c8-4a80ee90b667" />
 
-bash
-Copy
-Edit
+5. **Check if the tree package is installed**
+```
 tree --version
-Example output:
+```
+-  Output:
 
-yaml
-Copy
-Edit
-tree v1.8.0 (c) 1996 - 2018 by Steve Baker
+<img width="923" height="477" alt="Screenshot (209)" src="https://github.com/user-attachments/assets/71e6fcdf-2df5-4198-a5b3-fc9e41c42c9a" />
