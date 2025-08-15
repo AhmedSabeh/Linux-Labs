@@ -8,54 +8,37 @@ Practice testing network connectivity, checking network interfaces, and download
 ## Steps
 
 1. **Test connectivity to google.com**
-   ```bash
+   ```
    ping -c 4 google.com
+   ```
 Example output:
 
-python
-Copy
-Edit
-PING google.com (142.250.190.14) 56(84) bytes of data.
-64 bytes from lhr25s47-in-f14.1e100.net (142.250.190.14): icmp_seq=1 ttl=118 time=14.5 ms
-...
-Display your network interface information and IP addresses
+<img width="921" height="230" alt="Screenshot (211)" src="https://github.com/user-attachments/assets/b3f5a163-66dc-4781-86d4-dd6fc45a6b08" />
 
-Modern systems:
+2. **Display your network interface information and IP addresses**
 
-bash
-Copy
-Edit
+-   Modern systems:
+```
 ip addr
-Older systems:
-
-bash
-Copy
-Edit
+```
+-   Older systems:
+```
 ifconfig
-Example output (shortened):
-
-sql
-Copy
-Edit
-2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> ...
-    inet 192.168.1.100/24 brd 192.168.1.255 scope global dynamic ens33
-Use curl to download the homepage of a website
-
-bash
-Copy
-Edit
+```
+3. **Use curl to download the homepage of a website**
+```
 curl -o webpage.html https://example.com
-Or using wget:
-
-bash
-Copy
-Edit
+```
+-   Or using wget:
+```
 wget -O webpage.html https://example.com
-Verify the file was saved
-
-bash
-Copy
-Edit
+```
+4. **Verify the file was saved**
+```
 ls -l webpage.html
 cat webpage.html | head -n 10
-(Shows the first 10 lines of the downloaded HTML)
+```
+-   (Shows the first 10 lines of the downloaded HTML)
+-   Output:
+
+<img width="911" height="360" alt="Screenshot (212)" src="https://github.com/user-attachments/assets/363c4047-3edd-4eb8-902e-d1e0595786e1" />
