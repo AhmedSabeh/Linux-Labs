@@ -8,43 +8,27 @@ Practice creating and editing text files using both interactive editors and dire
 ## Steps
 
 1. **Use nano to create a file called `shopping_list.txt`**
-   ```bash
+   ```
    nano shopping_list.txt
-Add 5 items to your shopping list
-Example content inside nano:
+   ```
+2. **Add 5 items to your shopping list**
+-   content inside nano:
 
-nginx
-Copy
-Edit
-Milk
-Bread
-Eggs
-Apples
-Coffee
-Save with CTRL + O → Enter
+<img width="925" height="485" alt="Screenshot (208)" src="https://github.com/user-attachments/assets/3004b914-fff5-42b2-96b0-451573326b9a" />
 
-Exit with CTRL + X
 
-Add one more item to the end of the file without opening an editor
+-   Save with CTRL + O → Enter
 
-bash
-Copy
-Edit
+-   Exit with CTRL + X
+
+3. **Add one more item to the end of the file without opening an editor**
+```
 echo "Cheese" >> shopping_list.txt
-Display the final shopping list
-
-bash
-Copy
-Edit
+```
+4. **Display the final shopping list**
+```
 cat shopping_list.txt
-Example output:
+```
+-   Output:
 
-nginx
-Copy
-Edit
-Milk
-Bread
-Eggs
-Apples
-Coffee
-Cheese
+<img width="922" height="238" alt="Screenshot (207)" src="https://github.com/user-attachments/assets/d5a1b752-2e36-4d06-93b3-2ee3b223dbc7" />
