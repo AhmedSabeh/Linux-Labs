@@ -8,74 +8,51 @@ Learn how to check disk space usage, identify large directories, and inspect fil
 ## Steps
 
 1. **Check the disk space usage of all mounted filesystems**
-   ```bash
+   ```
    df -h
-Example output:
+   ```
+-   Output:
 
-bash
-Copy
-Edit
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda1        50G   20G   28G  42% /
-tmpfs           1.9G  2.0M  1.9G   1% /run
-Find the size of your home directory
+<img width="747" height="205" alt="Screenshot (213)" src="https://github.com/user-attachments/assets/5aeb0911-2e76-4db9-aad6-049c0212f8cc" />
 
-bash
-Copy
-Edit
+2. **Find the size of your home directory**
+```
 du -sh ~
-Example output:
+```
+-   Output:
 
-arduino
-Copy
-Edit
-3.2G    /home/ahmed
-Identify the largest directories in your home folder
+<img width="907" height="70" alt="Screenshot (214)" src="https://github.com/user-attachments/assets/20b5dcb0-e85c-41c8-98ca-2b771a9151d4" />
 
-bash
-Copy
-Edit
+3. **Identify the largest directories in your home folder**
+```
 du -sh ~/* | sort -hr | head -n 10
-Example output:
+```
+-   Output:
 
-arduino
-Copy
-Edit
-1.5G    /home/ahmed/Videos
-1.0G    /home/ahmed/Documents
-500M    /home/ahmed/Downloads
-Check how much space specific files are using
+<img width="913" height="250" alt="Screenshot (215)" src="https://github.com/user-attachments/assets/4b2b9b9e-3e7a-42fa-8fa9-489c9973f5da" />
 
-bash
-Copy
-Edit
+4. **Check how much space specific files are using**
+```
 ls -lh ~/my_projects/documents/readme.txt
-Example output:
+```
+-   Output:
 
-css
-Copy
-Edit
--rw-r--r-- 1 ahmed ahmed 1.2K Aug 14 20:30 readme.txt
-Display information about your storage devices
+<img width="910" height="104" alt="Screenshot (216)" src="https://github.com/user-attachments/assets/81d24fc5-ff08-4ea7-a0bc-208b7c0bab10" />
 
-bash
-Copy
-Edit
-lsblk
-Example output:
+5. **Display information about your storage devices**
+```
+lsblK
+```
+-   Output:
 
-pgsql
-Copy
-Edit
-NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
-sda      8:0    0   50G  0 disk
-└─sda1   8:1    0   50G  0 part /
-sr0     11:0    1 1024M  0 rom
-Notes
-df -h → Disk Free in human-readable format.
+<img width="908" height="474" alt="Screenshot (217)" src="https://github.com/user-attachments/assets/a09f9390-b37d-411a-8dfd-fa276b50e25e" />
 
-du -sh → Disk Usage summary for a directory.
+-   Notes
 
-lsblk → Lists block devices like HDDs, SSDs, and USB drives.
+      *   df -h → Disk Free in human-readable format.
 
-Sorting with sort -hr shows the largest directories first.
+      *   du -sh → Disk Usage summary for a directory.
+
+      *   lsblk → Lists block devices like HDDs, SSDs, and USB drives.
+
+      *   Sorting with sort -hr shows the largest directories first.
