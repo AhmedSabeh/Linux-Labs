@@ -8,69 +8,48 @@ Learn how to view running processes, identify them by Process ID (PID), and mana
 ## Steps
 
 1. **Display all currently running processes**
-   ```bash
+   ```
    ps aux
-Example output (partial):
+   ```
+-   Output 
 
-sql
-Copy
-Edit
-USER       PID  %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root         1  0.0  0.1 225276  1124 ?        Ss   Aug14   0:05 /sbin/init
-ahmed     1503  0.0  0.3  95432  3240 pts/0    Ss   19:45   0:00 bash
-Open a new terminal OR run a long-running command (example: sleep for 300 seconds)
+<img width="732" height="423" alt="Screenshot (203)" src="https://github.com/user-attachments/assets/901112be-8042-46c5-9338-d07af338ca42" />
 
-bash
-Copy
-Edit
-sleep 300 &
-Output example:
+2. **Open a new terminal OR run a long-running command (sleep for 60 seconds)**
+```
+sleep 60 &
+```
+-   Output:
+```
+[1] 191591
+```
+-   Here 191591 is the PID.
 
-csharp
-Copy
-Edit
-[1] 2156
-Here 2156 is the PID.
-
-Find the process ID (PID) of your sleep command
+3. **Find the process ID (PID) of your sleep command**
 
 If you didn’t note it from the previous step:
-
-bash
-Copy
-Edit
+```
 ps aux | grep sleep
-Example:
+```
 
-yaml
-Copy
-Edit
-ahmed     2156  0.0  0.0   2604   548 pts/0    S    19:46   0:00 sleep 300
-Kill the sleep process using its PID
+4. **Kill the sleep process using its PID**
+```
+kill 191591
+```
 
-bash
-Copy
-Edit
-kill 2156
-If it doesn’t stop, use:
+-   Ouput:
 
-bash
-Copy
-Edit
-kill -9 2156
-Monitor system processes in real-time
+<img width="924" height="211" alt="Screenshot (206)" src="https://github.com/user-attachments/assets/627a072c-879a-4ccf-b4d5-859081ef5bf9" />
+  
+5. **Monitor system processes in real-time**
 
 Using top:
-
-bash
-Copy
-Edit
+```
 top
-Press q to quit.
+```
+-   Press q to quit.
 
-Or, if htop is installed (more user-friendly):
-
-bash
-Copy
-Edit
+-   Or, if htop is installed (more user-friendly):
+```
 htop
+```
