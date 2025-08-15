@@ -1,80 +1,75 @@
-Lab 19: Environment Customization:
+# Lab 19: Environment Customization:
 
-1. Check your current environment variables
+### 1. Check your current environment variables
+```
 printenv
-
-
-or
-
+```
+-  or
+```
 env
+```
 
+-  This lists all environment variables currently set in your shell session.
 
-💡 This lists all environment variables currently set in your shell session.
-
-2. Display your PATH variable
+### 2. Display your PATH variable
+```
 echo $PATH
+```
+-  This shows the directories your system searches when you run a command.
 
+### 3. Add an alias to your `.bashrc` file
 
-This shows the directories your system searches when you run a command.
-
-3. Add an alias to your .bashrc file
-
-Let’s say you often run:
-
+-  Let’s say you often run:
+```
 ls -lah
+```
 
-
-You can make it shorter by adding an alias:
-
+-  You can make it shorter by adding an alias:
+```
 nano ~/.bashrc
-
-
-Add this line at the bottom:
-
+```
+-  Add this line at the bottom:
+```
 alias ll='ls -lah'
-
-
-Save and exit (CTRL+O, Enter, CTRL+X).
-Then reload your .bashrc:
-
+```
+-  Save and exit (CTRL+O, Enter, CTRL+X).
+-  Then reload your .bashrc:
+```
 source ~/.bashrc
-
-
-Now you can type:
-
+```
+-  Now you can type:
+```
 ll
+```
 
+-  and it will run ` ls -lah `.
 
-and it will run ls -lah.
+### 4. Create a custom prompt
 
-4. Create a custom prompt
-
-In .bashrc, you can edit the PS1 variable. For example:
-
+-  In `.bashrc`, you can edit the `PS1 variable`.:
+```
 PS1="\u@\h:\w$ "
+```
+-  \u → username
 
+-  \h → hostname
 
-\u → username
+-  \w → current directory
 
-\h → hostname
-
-\w → current directory
-
-Example custom style with colors:
-
+-  Example custom style with colors:
+```
 PS1="\[\e[32m\]\u@\h:\[\e[34m\]\w\[\e[0m\]$ "
-
-
-After editing, reload:
-
+```
+-  After editing, reload:
+```
 source ~/.bashrc
+```
+### 5. Test your customizations
 
-5. Test your customizations
+-  Run ll to see if alias works
 
-Run ll to see if alias works
+-  Check prompt appearance
 
-Check prompt appearance
+-  Verify $PATH
 
-Verify $PATH
-
-Ensure environment variables are accessible
+-  Ensure environment variables are accessible
