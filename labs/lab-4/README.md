@@ -8,68 +8,50 @@ Learn how to view, change, and verify file permissions in Linux.
 ## Steps
 
 1. **Create a file called `secret.txt` in your home directory**
-   ```bash
+   ```
    cd ~
    touch secret.txt
-Check the current permissions of the file
-
-bash
-Copy
-Edit
+   ```
+2. **Check the current permissions of the file**
+```
 ls -l secret.txt
-Example output:
+```
+-   Output:
 
-css
-Copy
-Edit
--rw-r--r-- 1 ahmed ahmed 0 Aug 14 19:20 secret.txt
-rw- → owner can read and write
+<img width="734" height="480" alt="Screenshot (194)" src="https://github.com/user-attachments/assets/de2a2f3c-4239-43ba-b33e-b9071204c55f" />
 
-r-- → group can only read
+      *   rw- → owner can read and write
 
-r-- → others can only read
+      *   r-- → group can only read
 
-Change the permissions so only you can read and write the file
+      *   r-- → others can only read
 
-bash
-Copy
-Edit
+3. **Change the permissions so only you can read and write the file**
+```
 chmod 600 secret.txt
 ls -l secret.txt
-Example output:
+```
+- Output:
 
-diff
-Copy
-Edit
--rw------- 1 ahmed ahmed 0 Aug 14 19:20 secret.txt
-Create a script file called hello.sh
+<img width="736" height="135" alt="Screenshot (198)" src="https://github.com/user-attachments/assets/734b8e40-771d-487b-a0e0-eeddee001669" />
 
-bash
-Copy
-Edit
+4. **Create a script file called `hello.sh`**
+```
 touch hello.sh
 echo "echo Hello, World!" > hello.sh
-Make the script executable for everyone
-
-bash
-Copy
-Edit
+```
+5. **Make the script executable for everyone**
+```
 chmod a+x hello.sh
 ls -l hello.sh
-Example output:
-
-diff
-Copy
-Edit
--rwxr-xr-x 1 ahmed ahmed 24 Aug 14 19:25 hello.sh
-Run the script
-
-bash
-Copy
-Edit
+```
+6. **Run the script**
+```
 ./hello.sh
-Output:
-
-Copy
-Edit
+```
+-   Output:
+```
 Hello, World!
+```
+
+<img width="734" height="480" alt="Screenshot (196)" src="https://github.com/user-attachments/assets/5f22e449-308d-4560-ad97-b6c7a0f85845" />
