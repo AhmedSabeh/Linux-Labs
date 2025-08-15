@@ -1,50 +1,34 @@
 # Lab 11: Service Management
 
 ## Objective
-Learn how to check the status of services, view logs, and see which services start automatically at boot.
+How to check the status of services, view logs, and see which services start automatically at boot.
 
 ---
 
 ## Steps
 
 1. **Check the status of a system service**  
-   Example: SSH service  
-   ```bash
-   sudo systemctl status ssh
-Example output (shortened):
+      *   Example: Nginx service  
+   ```
+   sudo systemctl status nginx
+   ```
+-   Output:
 
-lua
-Copy
-Edit
-● ssh.service - OpenBSD Secure Shell server
-     Loaded: loaded (/lib/systemd/system/ssh.service; enabled)
-     Active: active (running) since Tue 2025-08-12 14:03:20 EET; 3h 15min ago
-View recent system logs
+<img width="1049" height="414" alt="Screenshot (219)" src="https://github.com/user-attachments/assets/c413a9d8-8ced-4eea-acda-b33fb27e9734" />
 
-bash
-Copy
-Edit
+2. **View recent system logs**
+```
 sudo journalctl -n 20
-(Shows the last 20 log entries.)
+```
+-   (Shows the last 20 log entries.)
 
-Look for any error messages in the logs
-
-bash
-Copy
-Edit
+3. **Look for any error messages in the logs**
+```
 sudo journalctl -p err -n 20
-(Shows the last 20 log entries with error priority.)
+```
+-   (Shows the last 20 log entries with error priority.)
 
-Check which services are enabled to start at boot
-
-bash
-Copy
-Edit
+4. **Check which services are enabled to start at boot**
+```
 systemctl list-unit-files --type=service --state=enabled
-Example output:
-
-Copy
-Edit
-ssh.service                           enabled
-cron.service                          enabled
-network-manager.service               enabled
+```
