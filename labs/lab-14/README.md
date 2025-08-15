@@ -1,5 +1,6 @@
 # Lab 14: System Monitoring:
 
+
 1️⃣ Check current memory usage
 ```
 free -h
