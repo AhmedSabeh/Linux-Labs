@@ -1,6 +1,8 @@
 # Lab 19: Environment Customization:
 
-### 1. Check your current environment variables
+### Task 19.1: Check your current environment variables
+
+-  Environment variables define how your shell and programs behave.
 ```
 printenv
 ```
@@ -8,68 +10,55 @@ printenv
 ```
 env
 ```
+<img width="1084" height="99" alt="Screenshot (260)" src="https://github.com/user-attachments/assets/2bb33f5c-96ba-43b9-bbb6-b5b5c995cfd4" />
 
--  This lists all environment variables currently set in your shell session.
+### Task 19.2: Display your PATH variable
 
-### 2. Display your PATH variable
+-  The PATH variable tells Linux where to look for executables when you type a command.
 ```
 echo $PATH
 ```
--  This shows the directories your system searches when you run a command.
+-  You should see directories separated by : (like /usr/local/bin:/usr/bin:/bin).
 
-### 3. Add an alias to your `.bashrc` file
+<img width="1081" height="78" alt="Screenshot (261)" src="https://github.com/user-attachments/assets/04a0fd27-47c4-4ba6-b1cf-f13478cfe4a5" />
 
--  Let’s say you often run:
-```
-ls -lah
-```
+### Task 19.3: Add an alias to your .bashrc file
 
--  You can make it shorter by adding an alias:
+-  Aliases save time by shortening long commands.
+
+-  Open .bashrc in nano (or your preferred editor):
 ```
 nano ~/.bashrc
 ```
--  Add this line at the bottom:
+-  Add a line at the bottom. Example:
 ```
 alias ll='ls -lah'
 ```
--  Save and exit (CTRL+O, Enter, CTRL+X).
--  Then reload your .bashrc:
+
+-  Save & exit (CTRL+O, ENTER, CTRL+X).
+
+-  Reload .bashrc:
 ```
 source ~/.bashrc
 ```
--  Now you can type:
+
+-  Test your alias:
 ```
 ll
 ```
 
--  and it will run ` ls -lah `.
+### Task 19.4: Create a custom prompt 
 
-### 4. Create a custom prompt
-
--  In `.bashrc`, you can edit the `PS1 variable`.:
+-  The shell prompt is controlled by the PS1 variable. 
 ```
-PS1="\u@\h:\w$ "
+export PS1="student@devops:~$ "
 ```
--  \u → username
+<img width="905" height="79" alt="Screenshot (263)" src="https://github.com/user-attachments/assets/7fd58699-8fbd-4049-b77f-20f0936480d2" />
 
--  \h → hostname
+-  To make it permanent, add it to your ~/.bashrc.
 
--  \w → current directory
+### Task 19.5: Test your customizations
 
--  Example custom style with colors:
-```
-PS1="\[\e[32m\]\u@\h:\[\e[34m\]\w\[\e[0m\]$ "
-```
--  After editing, reload:
-```
-source ~/.bashrc
-```
-### 5. Test your customizations
+-  Run ll to test your alias.
 
--  Run ll to see if alias works
-
--  Check prompt appearance
-
--  Verify $PATH
-
--  Ensure environment variables are accessible
+-  Open a new terminal → see if your prompt and alias persist.
