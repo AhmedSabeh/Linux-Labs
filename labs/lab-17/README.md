@@ -1,50 +1,62 @@
-# Lab 17: Network File Transfer.
+🔹 Lab 17: Network File Transfer
+Task 17.1: Use wget to download a sample file from the internet
 
-## Task 17.1: Use wget to download a sample file
--  Navigate to your home directory
-```
-cd ~
-```
--  Download a sample text file
-```
-wget https://www.w3.org/TR/PNG/iso_8859-1.txt
-```
+Move into your lab directory:
 
-## Task 17.2: Use curl to fetch only headers of a website
-```
-curl -I https://www.google.com
-```
--  -I means fetch headers only.
+cd ~/linux-labs/labs/lab-17
+mkdir network-transfer && cd network-transfer
 
--  You’ll see details like HTTP status, server type, and date.
 
-## Task 17.3: Create a text file and move it between directories
--  Create a file
-```
-echo "This is my test file" > myfile.txt
-```
--  Create a directory to move it to
-```
-mkdir myfolder
-```
--  Move the file into the folder
-```
-mv myfile.txt myfolder/
-```
--  Verify
-```
-ls myfolder
-```
+Download a sample file (example: small text file from GNU project):
 
-## Task 17.4: Check file size before and after operations
--  Before moving (original file size)
-```
-ls -lh myfile.txt   # (Run this before moving in step above)
-```
--  After moving (inside folder)
-```
-ls -lh myfolder/myfile.txt
-```
-```
-ls -lh shows human-readable file sizes (KB, MB).
-```
+wget http://ftp.gnu.org/gnu/wget/wget-1.21.1.tar.gz
+
+
+Verify the download:
+
+ls -lh
+
+Task 17.2: Use curl to fetch just the headers of a website
+
+Run curl with the -I option (capital i):
+
+curl -I https://www.example.com
+
+
+✅ This shows only the HTTP headers (status, server, content type, etc.).
+
+Task 17.3: Create a simple text file and practice moving it between directories
+
+Create a text file:
+
+echo "This is a test file for Lab 17" > myfile.txt
+
+
+Check it exists:
+
+ls -l
+
+
+Make a new folder and move the file:
+
+mkdir moved-files
+mv myfile.txt moved-files/
+
+
+Verify:
+
+ls moved-files/
+
+Task 17.4: Check the file size before and after operations
+
+Use ls -lh for human-readable file sizes:
+
+ls -lh moved-files/myfile.txt
+
+
+Or use du:
+
+du -sh moved-files/myfile.txt
+
+
+Compare before and after moving (file size won’t change when moving, but good practice to check).
