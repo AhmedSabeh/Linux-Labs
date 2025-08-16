@@ -39,7 +39,6 @@ df -h
 5️⃣ Display running processes sorted by memory usage
 ```
 ps aux --sort=-%mem | head -n 15
-
 ```
 -  --sort=-%mem → sorts processes by memory usage (highest first).
 
