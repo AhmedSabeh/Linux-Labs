@@ -39,11 +39,8 @@ web_project/
 chmod -R 755 ~/web_project
 ```
 ## 5.  Backup Script (backup.sh)
-```
-#!/bin/bash
-tar -czf ~/web_project/backup/project_backup_$(date +%F).tar.gz ~/web_project
-echo "Backup created successfully!"
-```
+
+<img width="731" height="443" alt="Screenshot (255)" src="https://github.com/user-attachments/assets/1309628f-e130-430a-b397-189d22d08fc6" />
 
 ## 6.  Make it executable:
 ```
